@@ -11,13 +11,8 @@ This project demonstrates modular programming in Assembly, linking multiple obje
 * **ABI Compliance:** Follows System V AMD64 calling convention (`rdi`, `rsi`, `rdx`).
 
 ## ⚙️ How to Build and Run
-Ensure you have `nasm` and `ld` installed.
-```bash
-# Build the project
-nasm -f elf64 main.asm -o main.o
-nasm -f elf64 math.asm -o math.o
-nasm -f elf64 io.asm -o io.o
-ld main.o math.o io.o -o calc
+The project includes an automated build script (`build.sh`) that handles compilation, linking, and execution.
 
-# Run
-./calc
+1. Make the script executable:
+   ```bash
+   chmod +x build.sh
